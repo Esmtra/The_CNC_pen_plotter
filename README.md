@@ -1,7 +1,6 @@
 # **The CNC pen plotter**
 
-This project aims to create a digital avometer using an Arduino board. The digital avometer is an electronic instrument that measures various electrical quantities such as voltage, current, resistance, and continuity.
-
+This project aims to create a Cartesian robot with a closed-loop control system, including actuator sizing, electrical schematic design and software framework. The robot has an overhead structure controlling horizontal motion and a robotic arm for vertical motion with a pen effector.
 ## **Table of Contents**
 
 - [Abstract](#Abstract)
