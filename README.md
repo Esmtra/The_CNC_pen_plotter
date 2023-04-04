@@ -16,8 +16,8 @@ This project aims to create a digital avometer using an Arduino board. The digit
 - [CAD_Detailed_Design(closedloop)](#CAD_Detailed_Design(closedLoop))
 - [MATLAB_Model_and_Simulation(closedLoop)](#MATLAB_Model_and_Simulation(closedLoop))
 - [Electrical_Schematic_and_Simulation(closedoop)](#Electrical_Schematic_and_Simulation(closedLoop))
+- [Component_selection](#Component_selection)
 - [Trials(closedLoop)](#Trials(closedLoop))
-
 - [Software_Design_and_Framework](#Software_Design_and_Framework)
 
 ## **Abstract**
@@ -39,7 +39,8 @@ Cartesian robots have an overhead structure that controls the motion in the hori
 ![CAD_Detailed_Design(OpenLoop)](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Assembly%202.png "CAD_Detailed_Design(OpenLoop)")
 
 ### **MATLAB_Model_and_Simulation(OpenLoop)**
-![MATLAB_Model_and_Simulation(OpenLoop)](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Cad%20detailed%20Design%201.png "MATLAB_Model_and_Simulation(OpenLoop)")
+
+![MATLAB_Model_and_Simulation(OpenLoop)](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/MATLAB%20model%20and%20simulation.png "MATLAB_Model_and_Simulation(OpenLoop)")
 
 ![MATLAB_Model_and_Simulation(OpenLoop)](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/MATLAB%20model%20and%20simulation%202.png "MATLAB_Model_and_Simulation(OpenLoop)")
 
@@ -76,43 +77,41 @@ in closed loop we will control dc motors using PID and encoders, so we will use 
 ### **CAD_Detailed_Design(closedLoop)**
 ### **MATLAB_Model_and_Simulation(closedLoop)**
 ### **Electrical_Schematic_and_Simulation(closedLoop)**
+### **Component_selection**
+- GT2 Bore 5mm 20 Teeth Timing Aluminum Pulley Fit GT2-6mm Open Timing Belt
+- Meters GT2-6mm Open Timing Belt
+- DC Geared Motor 50r/min , 0.62 N.m 2.9 Watt
+- C-Beam Linear Rail
+- 3d printing parts
+- Servo motor
+- Metal V-Groove Bearing Kit
+- DC motor shield
+- Arduino Mega
+- Arduino UNO
+- Rotary Encoder E6B2-CWZ3E (1000 P/R)
+- Power supply 12v - 5A
+
+
 ### **Trials(closedLoop)**
 
 
 ### **Software_Design_and_Framework**
 - **Inkscape** 
 it’s our HMI. used to convert the image needed to be drawn into path and then creates GCODE file to be sent to Arduino.
-
+![SW](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/is.jpg "SW")
 
 - **Universal G-code sender (UGS)**
 it’s the communication between our machine and computer, it has advantages of like more oversight of the machine and a real time view of the toolpath.  
-
-
-
+![SW](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/ugs.png "SW")
 
 - **GRBL**
 it’s the main software running on Arduino that converts G-code into electrical signals to motor drivers (CNC shield). 
 Run GRBL on Arduino:
 download the GRBL library and extract it in the Arduino's library folder. now open Arduino ide and open GRBLMAIN in example sketches, and upload "GRBL to Arduino Sketch" to your Arduino UNO board. and that's it. you have uploaded GRBL to your Arduino board
+
 - **GRBL-Plotter**
 GRBL-Plotter is a graphic converter and gcode sender for all purposes.
 The main focus is on the post-processing of vector graphics, the specialty is the preparation of the generated Gcode, which is based on properties of the imported graphics, such as Layer, pen color or pen thickness
-
-
-
-## **Usage**
-
-After installing the project, you can use it to measure various electrical quantities such as voltage, current, and resistance. The digital display makes it easy to read the values.
-![Practical results test case 1]("E:\Documents\ASU\Junior_Mechatronics\T2\electronics\PROJECT\final\Digital-Avometer-using-Arduino\test case 1.png")
-## **Documentation and Reference  **
-
-[Arduino Board Documentation](https://www.arduino.cc/en/Guide/Introduction)
-[LCD Display Documentation](https://www.sparkfun.com/datasheets/LCD/HD44780.pdf)
-[Transistor Documentation](https://www.onsemi.com/pdf/datasheet/tip120-d.pdf)
-
-## **Test_Case**
-![Digital avometer test case1](https://github.com/Esmtra/Digital-Avometer-using-Arduino/blob/main/test_case_1.png "Digital avometer test case1")
-![Digital avometer test case2](https://github.com/Esmtra/Digital-Avometer-using-Arduino/blob/main/test_case2.png "Digital avometer test case2")
 
 
 
@@ -120,5 +119,5 @@ After installing the project, you can use it to measure various electrical quant
 ## **Contact**
 
 - **[Eslam S Rady](mailto:Eselmtrawy@gmail.com)** - Email address
-- **[GitHub](https://github.com/Esmtra)** - GitHub profile link
-- **[LinkedIn](https://www.linkedin.com/in/eslam-mtra-1714201b7/)** - LinkedIn profile link
+- **[GitHub](https://github.com/Esmtra)**     - GitHub profile link
+- **[LinkedIn](https://www.linkedin.com/in/eslam-mtra-1714201b7/)**    - LinkedIn profile link
