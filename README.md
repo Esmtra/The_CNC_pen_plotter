@@ -30,7 +30,7 @@ Cartesian robots have an overhead structure that controls the motion in the hori
 
 # **For Open Loop System**
 ### **Flowchart_open_loop**
-![For Open Loop System](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Open%20loop%20output.jpg "For Open Loop System")
+![For Open Loop System](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Flowchart%20for%20open%20loop.png "For Open Loop System")
 
 ### **CAD_Detailed_Design(OpenLoop)**
 ![CAD_Detailed_Design(OpenLoop)](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Cad%20detailed%20Design%201.png "CAD_Detailed_Design(OpenLoop)")
@@ -71,7 +71,7 @@ A closed loop control system is a mechanical or electronic device that automatic
 ### **Flowchart_closed_loop**
 in closed loop we will control dc motors using PID and encoders, so we will use only Inkscape to get GCODE from, and universal G-code sender to send to Arduino. then we code Arduino file and make it reads the new position of each axis from this G-code file, then calculate the number of Rotation needed to be rotated by each axis from this equation (x_new-x_pre )×(number of rotation /mm)
 
-![For Open Loop System](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Open%20loop%20output.jpg "For Open Loop System")
+![For Open Loop System](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Flowchart%20for%20closed%20loop.png "For Open Loop System")
 
 ### **CAD_Detailed_Design(closedLoop)**
 ### **MATLAB_Model_and_Simulation(closedLoop)**
