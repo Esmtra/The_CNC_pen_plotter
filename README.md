@@ -6,18 +6,12 @@ This project aims to create a Cartesian robot with a closed-loop control system 
 - [Abstract](#Abstract)
 - [Introduction_to_Cartesian_Robot](#Introduction_to_Cartesian-Robot)
 - [Flowchart_open_loop](#Flowchart_open_loop)
-- [CAD_Detailed_Design(OpenLoop)](#CAD_Detailed_Design(OpenLoop))
-- [MATLAB_Model_and_Simulation(OpenLoop)](#MATLAB_Model_and_Simulation(OpenLoop))
-- [Electrical_Schematic_and_Simulation(OpenLoop)](#Electrical_Schematic_and_Simulation(OpenLoop))
-- [Trials(OpenLoop)](#Trials(OpenLoop))
-- ....................................
 - [Flowchart_closed_loop](#Flowchart_closed_loop)
-- [CAD_Detailed_Design(closedloop)](#CAD_Detailed_Design(closedLoop))
-- [MATLAB_Model_and_Simulation(closedLoop)](#MATLAB_Model_and_Simulation(closedLoop))
-- [Electrical_Schematic_and_Simulation(closedoop)](#Electrical_Schematic_and_Simulation(closedLoop))
-- [Component_selection](#Component_selection)
-- [Trials(closedLoop)](#Trials(closedLoop))
+- [CAD_Detailed_Design](#CAD_Detailed_Design)
+- [MATLAB_Model_and_Simulation](#MATLAB_Model_and_Simulation)
+- [Electrical_Schematic_and_Simulation](#Electrical_Schematic_and_Simulation)
 - [Software_Design_and_Framework](#Software_Design_and_Framework)
+- [Result](#Result)
 
 ## **Abstract**
 
@@ -28,14 +22,26 @@ Cartesian coordinate geometry is an excellent method for mapping three-dimension
 
 Cartesian robots have an overhead structure that controls the motion in the horizontal plane and a robotic arm that actuates motion vertically. They can be designed to move in x-y axes or x-y-z axes. The robotic arm is placed on the scaffolding and can be moved in the horizontal plane. The robotic arm has an effector or machine tool attached to the end of the arm, which is a pen.
 
-# **For Open Loop System**
+# **For open Loop System**
 ### **Flowchart_open_loop**
 ![For Open Loop System](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Flowchart%20for%20open%20loop.png "For Open Loop System")
+
+# **For closed Loop System**
+A closed loop control system is a mechanical or electronic device that automatically regulates a system to maintain a desired state or set point without human interaction.
+![closed loop](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/closed%20loop%20control%20system.png "closed loop")
+
+### **Flowchart_closed_loop**
+in closed loop we will control dc motors using PID and encoders, so we will use only Inkscape to get GCODE from, and universal G-code sender to send to Arduino. then we code Arduino file and make it reads the new position of each axis from this G-code file, then calculate the number of Rotation needed to be rotated by each axis from this equation (x_new-x_pre )×(number of rotation /mm)
+
+![For Open Loop System](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Flowchart%20for%20closed%20loop.png "For Open Loop System")
+
 
 ### **CAD_Detailed_Design(OpenLoop)**
 ![CAD_Detailed_Design(OpenLoop)](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Cad%20detailed%20Design%201.png "CAD_Detailed_Design(OpenLoop)")
 
 ![CAD_Detailed_Design(OpenLoop)](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Assembly%202.png "CAD_Detailed_Design(OpenLoop)")
+
+![d](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/D1.mp4 "d")
 
 ### **MATLAB_Model_and_Simulation(OpenLoop)**
 
@@ -62,20 +68,7 @@ Cartesian robots have an overhead structure that controls the motion in the hori
 ![Simulation 2](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Simulation%202.jpg "Simulation 2")
 
 
-### **Trials(OpenLoop)**
 
-# **For closed Loop System**
-A closed loop control system is a mechanical or electronic device that automatically regulates a system to maintain a desired state or set point without human interaction.
-![closed loop](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/closed%20loop%20control%20system.png "closed loop")
-
-### **Flowchart_closed_loop**
-in closed loop we will control dc motors using PID and encoders, so we will use only Inkscape to get GCODE from, and universal G-code sender to send to Arduino. then we code Arduino file and make it reads the new position of each axis from this G-code file, then calculate the number of Rotation needed to be rotated by each axis from this equation (x_new-x_pre )×(number of rotation /mm)
-
-![For Open Loop System](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/Flowchart%20for%20closed%20loop.png "For Open Loop System")
-
-### **CAD_Detailed_Design(closedLoop)**
-### **MATLAB_Model_and_Simulation(closedLoop)**
-### **Electrical_Schematic_and_Simulation(closedLoop)**
 ### **Component_selection**
 - GT2 Bore 5mm 20 Teeth Timing Aluminum Pulley Fit GT2-6mm Open Timing Belt
 - Meters GT2-6mm Open Timing Belt
@@ -89,9 +82,6 @@ in closed loop we will control dc motors using PID and encoders, so we will use 
 - Arduino UNO
 - Rotary Encoder E6B2-CWZ3E (1000 P/R)
 - Power supply 12v - 5A
-
-
-### **Trials(closedLoop)**
 
 
 ### **Software_Design_and_Framework**
@@ -112,8 +102,8 @@ download the GRBL library and extract it in the Arduino's library folder. now op
 GRBL-Plotter is a graphic converter and gcode sender for all purposes.
 The main focus is on the post-processing of vector graphics, the specialty is the preparation of the generated Gcode, which is based on properties of the imported graphics, such as Layer, pen color or pen thickness
 
-
-
+### **Result**
+![d](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/OUT.mp4 "d")
 
 ## **Contact**
 
