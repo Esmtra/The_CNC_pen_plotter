@@ -66,7 +66,7 @@ Cartesian robots have an overhead structure that controls the motion in the hori
 
 # **For closed Loop System**
 A closed loop control system is a mechanical or electronic device that automatically regulates a system to maintain a desired state or set point without human interaction.
-![closed loop](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/closed%20loop%20control%20system.pngg "closed loop")
+![closed loop](https://github.com/Esmtra/The_CNC_pen_plotter/blob/main/Img/closed%20loop%20control%20system.png "closed loop")
 
 ### **Flowchart_closed_loop**
 in closed loop we will control dc motors using PID and encoders, so we will use only Inkscape to get GCODE from, and universal G-code sender to send to Arduino. then we code Arduino file and make it reads the new position of each axis from this G-code file, then calculate the number of Rotation needed to be rotated by each axis from this equation (x_new-x_pre )×(number of rotation /mm)
